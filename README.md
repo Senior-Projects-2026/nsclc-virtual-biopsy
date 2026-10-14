@@ -1,39 +1,39 @@
 # 🫁 NSCLC Virtual Biopsy: EGFR Mutation Predictor
 
-## Descrierea Proiectului
-Acest proiect dezvoltă un sistem inteligent tip "biopsie virtuală" pentru a asista medicii radiologi și oncologi în diagnosticarea și tratamentul cancerului pulmonar (Non-Small Cell Lung Cancer - NSCLC). 
+## Project Description
+This project develops a "virtual biopsy" intelligent system to assist radiologists and oncologists in diagnosing and treating lung cancer (Non-Small Cell Lung Cancer - NSCLC). 
 
-Sistemul propus elimină necesitatea unei proceduri invazive imediate, analizând texturile, forma și intensitatea din scanările CT (prin intermediul pipeline-urilor de Radiomics) pentru a prezice **mutația genetică EGFR**. Această predicție ghidează rapid medicii către prescrierea tratamentelor țintite corespunzătoare.
+The proposed system eliminates the need for an immediate invasive procedure by analyzing the textures, shape, and intensity of CT scans (via Radiomics pipelines) to predict the **EGFR genetic mutation**. This prediction quickly guides doctors toward prescribing appropriate targeted treatments.
 
-## ⚙️ Instalare și Configurare (Setup)
-Pentru a asigura reproductibilitatea proiectului și pentru a evita conflictele între librării, te rugăm să folosești mediul virtual local (`venv`).
+## ⚙️ Installation and Setup
+To ensure project reproducibility and avoid library conflicts, please use the local virtual environment (`venv`).
 
-### 1. Crearea mediului virtual
-Deschide terminalul în folderul principal al proiectului și rulează:
+### 1. Create the virtual environment
+Open the terminal in the main project folder and run:
 ```bash
 python -m venv venv
 ```
 
-### 2. Activarea mediului virtual
-* **Pe Windows:**
+### 2. Activate the virtual environment
+* **On Windows:**
   ```bash
   venv\Scripts\activate
   ```
-* **Pe macOS / Linux:**
+* **On macOS / Linux:**
   ```bash
   source venv/bin/activate
   ```
-*(Odată activat, ar trebui să vezi prefixul `(venv)` în linia de comandă.)*
+*(Once activated, you should see the `(venv)` prefix in the command line.)*
 
-### 3. Instalarea dependențelor
-Instalează pachetele necesare rulând:
+### 3. Install dependencies
+Install the required packages by running:
 ```bash
 pip install -r requirements.txt
 ```
 
-### 4. Rularea aplicației (Interfața de bază - Etapa 1)
-Pentru a porni interfața web dezvoltată cu Streamlit, rulează:
+### 4. Run the application (Base Interface - Phase 1)
+To start the web interface developed with Streamlit, run:
 ```bash
 streamlit run app.py
 ```
-Aplicația se va deschide automat într-un tab nou în browser-ul tău implicit la adresa `http://localhost:8501`.
+The application will automatically open in a new tab in your default browser at `http://localhost:8501`.

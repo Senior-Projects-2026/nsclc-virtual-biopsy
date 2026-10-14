@@ -4,29 +4,29 @@ st.set_page_config(page_title="NSCLC Virtual Biopsy", page_icon="🫁")
 
 st.title("🫁 NSCLC Virtual Biopsy Predictor")
 st.write(
-    "Acest sistem analizează scanările CT folosind extragerea de trăsături (Radiomics) pentru a prezice non-invaziv statusul mutației EGFR.")
+    "This system analyzes CT scans using feature extraction (Radiomics) to non-invasively predict the EGFR mutation status.")
 
-uploaded_file = st.file_uploader("1. Încarcă scanarea CT a pacientului (format .nii.gz sau .zip)",
+uploaded_file = st.file_uploader("1. Upload patient's CT scan (.nii.gz or .zip format)",
                                  type=['nii.gz', 'zip'])
 
 col1, col2 = st.columns(2)
 with col1:
-    age = st.number_input("2. Vârsta pacientului", min_value=18, max_value=100, value=60)
+    age = st.number_input("2. Patient Age", min_value=18, max_value=100, value=60)
 with col2:
-    gender = st.selectbox("3. Sexul pacientului", ["Masculin", "Feminin"])
+    gender = st.selectbox("3. Patient Gender", ["Male", "Female"])
 
 st.divider()
 
-if st.button("Rulează Biopsia Virtuală (Predict EGFR)", type="primary"):
+if st.button("Run Virtual Biopsy (Predict EGFR)", type="primary"):
 
     if uploaded_file is not None:
-        st.success("Extragerea trăsăturilor (Radiomics) s-a realizat cu succes!")
+        st.success("Feature extraction (Radiomics) completed successfully!")
 
         # hardcoded
-        st.metric(label="Status Prezis Mutație EGFR", value="Pozitiv (85% probabilitate)")
+        st.metric(label="Predicted EGFR Mutation Status", value="Positive (85% probability)")
 
         st.info(
-            "Notă: Aceasta este o predicție simulată. Începând cu Etapa 3, aici va fi integrat modelul real de Machine Learning.")
+            "Note: This is a simulated prediction. Starting with Phase 3, the real Machine Learning model will be integrated here.")
 
     else:
-        st.warning("Te rog să încarci un fișier CT pentru a putea rula predicția.")
+        st.warning("Please upload a CT file to run the prediction.")
